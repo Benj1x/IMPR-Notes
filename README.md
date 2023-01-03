@@ -101,12 +101,12 @@ antage, at vi **kun** skal vise det for "int a ="
 1 #include <stdio.h>
 2 int main()
 3 {
-4 int var = 5;
-5 printf("var: %d\n", var);
+4   int var = 5;
+5   printf("var: %d\n", var);
 6
 7 // Notece the use of & before var
-8 printf("address of var: &p", &var);
-9 return 0;
+8   printf("address of var: &p", &var);
+9   return 0;
 10 }
 ```
 ```
@@ -120,16 +120,16 @@ address of var: 2686778
 ```
 1 #include <stdio.h>
 2 int main(){
-3 int x [4];
-4 int i;
+3   int x [4];
+4   int i;
 5
-6 for (i = 0; i < 4; ++9){
-7  printf("&x[%d] = %p\n = %p\n " , i , &x [ i ] ) ;
-8 }
+6   for (i = 0; i < 4; ++9){
+7    printf("&x[%d] = %p\n = %p\n " , i , &x [ i ] ) ;
+8   }
 9
-10 p r i n t f ( " Address o f a r r a y x : %p " , x ) ;
+10   printf("Address of array X: %p", x);
 11
-12 r e t u r n 0 ;
+12   return 0;
 13 }
 ```
 ```
@@ -145,28 +145,28 @@ There is a difference of 4 bytes between two array elements. It is be-
 cause the size of int is 4 bytes. The address of &x[0] and x is the same. It’s
 because the variable name x points to the first element of the array.
 ```
-1 //Here , we have d e c l a r e d an a r r a y x o f 6 e l e m e n t s. To a c c e s s
-e l e m e n t s o f t h e a r r a y , we have used p o i n t e r s.
-2 # i n c l u d e < s t d i o. h>
-3 i n t main ( ) {
-4
-5 i n t i , x [ 6 ] , sum = 0 ;
+1 //Here, we have decalred an array 'x' of 6 elements. To access elements of the array
+  elements of the array, we have used pointers.
+2 #include <stdio.h>
+3 int main()
+4 {
+5   int i, x[6], sum = 0;
 6
-7 p r i n t f ( " E n t e r 6 numbers : " ) ;
+7   printf("Enter 6 numbers: ");
 8
-9 f o r ( i = 0 ; i < 6 ; ++ i ) {
-10 // E q u i v a l e n t t o s c a n f ("%d " , &x [ i ] ) ;
-11 s c a n f ( "%d " , x+ i ) ;
+9   for(i = 0; i < 6; ++i) {
+10  //Equivalent to scanf("%d", &x [i]);
+11  scanf("%d", x+i);
 12
-13 // E q u i v a l e n t t o sum += x [ i ]
-14 sum += *( x+ i ) ;
-15 }
+13   //Equivalent to sum += x[i]
+14   sum +=*(x+i);
+15  }
 16
-17 p r i n t f ( "Sum = %d " , sum ) ;
+17  printf("Sum = %d", sum);
 18
-19 r e t u r n 0 ;
+19  return 0;
 20 }
-
+```
 ```
 Output: Enter 6 numbers: 2
 3
@@ -177,25 +177,23 @@ Output: Enter 6 numbers: 2
 Sum = 29
 ```
 
-1 // I n t h i s example , &x [ 2 ] , t h e a d d r e s s o f t h e t h i r d e l e m e n t , i s
-a s s i g n e d t o t h e p t r p o i n t e r. Hence , 3 was d i s p l a y e d when we
-p r i n t e d *p t r.
-2 // p r i n t i n g *( p t r + 1 ) g i v e s us t h e f o u r t h e l e m e n t. S i m i l a r l y ,
-p r i n t i n g *( p t r − 1 ) g i v e s us t h e second e l e m e n t.
-3 # i n c l u d e < s t d i o. h>
-4 i n t main ( ) {
+1 //In this example, &x[2], the address of the third element, is assigned to the ptr pointer.
+ Hence , 3 was dispayed when we printed the *ptr.
+2 //printing *(ptr+1) gives us the fourth element. Similarly, printing *(ptr-1) gives us the second element.
+3 #include <stdio.h>
+4 int main() {
 5
-6 i n t x [ 5 ] = { 1 , 2 , 3 , 4 , 5 } ;
-7 i n t* p t r ;
+6  int x[5] = {1, 2, 3, 4, 5};
+7  int* ptr;
 8
-9 // p t r i s a s s i g n e d t h e a d d r e s s o f t h e t h i r d e l e m e n t
-10 p t r = &x [ 2 ] ;
+9  //ptr is assigned the address of the third element
+10  ptr = &x[2]; 
 11
-12 p r i n t f ( "*p t r = %d \n " , *p t r ) ; // 3
-13 p r i n t f ( "*( p t r + 1 ) = %d \n " , *( p t r + 1 ) ) ; // 4
-14 p r i n t f ( "*( p t r − 1 ) = %d " , *( p t r − 1 ) ) ; // 2
+12  printf("*ptr = %d \n", *ptr); // 3
+13  printf("*(ptr+1) = %d \n", *(ptr+1)); // 4
+14  printf("*(ptr-1) = %d", *(ptr-1));  // 2
 15
-16 r e t u r n 0 ;
+16  return 0;
 17 }
 
 ## 5 Memory Allocation
@@ -207,12 +205,11 @@ The name "malloc" stands for memory allocation.
 The malloc() function reserves a block of memory of the specified num-
 ber of bytes. And, it returns a pointer of void which can be casted into
 pointers of any form.
-1 // T h i s a l l o c a t e s 4 0 0 b y t e s o f memory. B e c a u s e t h e s i z e o f a f l o a t
-i s 4 b y t e s. And , t h e p o i n t e r p t r h o l d s t h e a d d r e s s o f t h e
-f i r s t b y t e i n t h e a l l o c a t e d memory.
+1 //This allocates 400 bytes of memory. Because the size of a float is 4 bytes.
+    And, the pointer ptr holds the address of the first byte in the allocated memory.
 2
-3 p t r = ( f l o a t*) m a l l o c ( 1 0 0 * s i z e o f ( f l o a t ) ) ;
-4 // R e s u l t s i n a NULL p o i n t e r i f t h e memory c a n n o t be a l l o c a t e d.
+3 ptr = (float*) malloc(100 * sizeof(float));
+4 //Results in a NULL pointer if the memory cannot be allocated.
 ```
 ### 5.2 calloc
 
@@ -224,9 +221,8 @@ The name "calloc" stands for contiguous allocation.
 The malloc() function allocates memory and leaves the memory unini-
 tialized, whereas the calloc() function allocates memory and initializes all
 bits to zero.
-1 // a l l o c a t e s c o n t i g u o u s s p a c e i n memory f o r 25 e l e m e n t s o f t y p e
-f l o a t.
-2 p t r = ( f l o a t*) c a l l o c ( 2 5 , s i z e o f ( f l o a t ) ) ;
+1 //allocates contiguous space in memory for 25 elements of type float.
+2 ptr = (float*) calloc(25, sizeof(float));
 ```
 ### 5.3 realloc
 
@@ -234,42 +230,39 @@ f l o a t.
 If the dynamically allocated memory is insufficient or more than required,
 you can change the size of previously allocated memory using the realloc()
 function.
-1 p t r = ( i n t*) m a l l o c ( 1 0 * s i z e o f ( i n t ) ) ;
+1 ptr = (int*) malloc(10 * sizeof(int));
 2
-3 p t r = r e a l l o c ( p t r , 20 * s i z e o f ( i n t ) ) ;
-4 //Here , p t r i s r e a l l o c a t e d with a new s i z e 2 0.
+3 ptr = realloc(ptr, 20 * sizeof(int));
+4 //Here, ptr is reallocated with a new size 20.
 ```
 ## 6 Structs:
 
 ### 6.1 Pointers to structs:
 
-1 # i n c l u d e < s t d i o. h>
-2 s t r u c t p e r s o n
+1 #include <stdio.h>
+2 struct person
 3 {
-4 i n t age ;
-5 f l o a t w e i g h t ;
-6 } ;
+4    int age;
+5    float weight;
+6 };
 7
-8 i n t main ( )
-9 {
-10 s t r u c t p e r s o n *p e r s o n P t r , p e r s o n 1 ;
-11 p e r s o n P t r = &p e r s o n 1 ;
+8 int main()
+9  {
+10    struct person *personPtr, person1;
+11    personPtr = &person1;   
 12
-13 p r i n t f ( " E n t e r age : " ) ;
-14 s c a n f ( "%d " , &p e r s o n P t r −>age ) ;
+13    printf("Enter age: ");
+14    scanf("%d", &personPtr->age);
 15
-16 p r i n t f ( " E n t e r w e i g h t : " ) ;
-17 s c a n f ( "%f " , &p e r s o n P t r −>w e i g h t ) ;
+16    printf("Enter weight: ");
+17    scanf("%f", &personPtr->weight);
 18
-
-
-19 p r i n t f ( " D i s p l a y i n g : \ n " ) ;
-20 p r i n t f ( " Age : %d\n " , p e r s o n P t r −>age ) ;
-21 p r i n t f ( " w e i g h t : %f " , p e r s o n P t r −>w e i g h t ) ;
+19    printf("Displaying:\n");
+20    printf("Age: %d\n", personPtr->age);
+21    printf("weight: %f", personPtr->weight);
 22
-23 r e t u r n 0 ;
+23    return 0;
 24 }
-
 ```
 The address of person1 is stored in the personPtr pointer using personPtr
 = &person1;.
@@ -280,19 +273,19 @@ equivalent to *personPtr.weight
 ```
 ### 6.2 Dynamically allocating structs:
 
-1 # i n c l u d e < s t d i o. h>
-2 # i n c l u d e < s t d l i b. h>
-3 s t r u c t p e r s o n {
-4 i n t age ;
-5 f l o a t w e i g h t ;
-6 c h a r name [ 3 0 ] ;
-7 } ;
+1 #include <stdio.h>
+2 #include <stdlib.h>
+3 struct person {
+4    int age;
+5    float weight;
+6    char name[30];
+7 };
 8
-9 i n t main ( )
+9 int main()
 10 {
-11 s t r u c t p e r s o n *p t r ;
-12 // a l l o c a t i n g memory f o r 50 numbers o f s t r u c t p e r s o n
-13 p t r = ( s t r u c t p e r s o n*) m a l l o c ( 5 0 * s i z e o f ( s t r u c t p e r s o n ) ) ;
+11   struct person *ptr;
+12   // allocating memory for 50 numbers of struct person
+13   ptr = (struct person*) malloc(50 * sizeof(struct person));
 14 }
 
 ```
