@@ -49,6 +49,7 @@ Notes for IMPR exam - mostly the stuff I'm a bit unsure off
 
 ### 2.1 Læs spørgsmålet flere gange, og forstå:
 ![examIMPR](examIMPR.png)
+
 Læs opgaverne godt igennem, og forstå - eksamenssættet er eksplicit i
 hvad der står eksempel, fra Mini-eksamenssæt:
 
@@ -415,3 +416,7 @@ If the file does not exist, it will be created.
 11
 ```
 
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
