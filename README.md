@@ -69,48 +69,46 @@ antage, at vi **kun** skal vise det for "int a ="
 5
 6 int *x1;
 7 int* x2 ;
-8 //Let’s take anoth e r example o f d e c l a r i n g p o i n t e r s.
+8 //Let’s take anoth er example of declaring pointers.
 9
-10 i n t* x1 , x2 ;
-11 //Here , we have d e c l a r e d a p o i n t e r p1 and a normal v a r i a b l e p.
+10 int* x1, x2;
+11 //Here , we have declared a pointer x1 and a normal variable x2.
 ```
 ### 3.2 Assigning addresses to Pointers
 
 ```
-1 i n t* pc , c ;
-2 c = 5 ;
-3 pc = &c ;
-4 //Here , 5 i s a s s i g n e d t o t h e c v a r i a b l e. And , t h e a d d r e s s o f c i s
-a s s i g n e d t o t h e pc p o i n t e r.
+1 int* pc, c;
+2 c = 5;
+3 pc = &c;
+4 //Here, 5 is assigned to the variable 'c'. And, the address of c is assigned to the pointer.
 ```
 ### 3.3 Changing Value Pointed by Pointers
 
 ```
-1 i n t* pc , c ;
-2 c = 5 ;
-3 pc = &c ;
-4 c = 1 ;
-5 p r i n t f ( "%d " , c ) ; // Output : 1
-6 p r i n t f ( "%d " , *pc ) ; // Ouptut : 1
-7 //We have a s s i g n e d t h e a d d r e s s o f c t o t h e pc p o i n t e r.
+1 int* pc, c;
+2 c = 5;
+3 pc = &c;
+4 c = 1;
+5 printf("%d", c); // Output : 1
+6 printf("%d", *pc); // Ouptut : 1
+7 //We have assigned the address of c to the pc pointer.
 8
-9 //Then , we changed t h e v a l u e o f c t o 1. S i n c e pc and t h e a d d r e s s
-o f c i s t h e same , *pc g i v e s us 1.
+9 //Then , we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.
 ```
 
 ### 3.4 Printing a variable and it’s memory address:
-
-1 # i n c l u d e < s t d i o. h>
-2 i n t main ( )
+```
+1 #include <stdio.h>
+2 int main()
 3 {
-4 i n t v a r = 5 ;
-5 p r i n t f ( " v a r : %d\n " , v a r ) ;
+4 int var = 5;
+5 printf("var: %d\n", var);
 6
-7 // N o t i c e t h e use o f & b e f o r e v a r
-8 p r i n t f ( " a d d r e s s o f v a r : %p " , &v a r ) ;
-9 r e t u r n 0 ;
+7 // Notece the use of & before var
+8 printf("address of var: &p", &var);
+9 return 0;
 10 }
-
+```
 ```
 Output:
 var: 5
@@ -119,21 +117,21 @@ address of var: 2686778
 ## 4 Arrays & pointers:
 
 ### 4.1 Print addresses of array elements:
-
-1 # i n c l u d e < s t d i o. h>
-2 i n t main ( ) {
-3 i n t x [ 4 ] ;
-4 i n t i ;
+```
+1 #include <stdio.h>
+2 int main(){
+3 int x [4];
+4 int i;
 5
-6 f o r ( i = 0 ; i < 4 ; ++ i ) {
-7 p r i n t f ( "&x[%d ] = %p\n " , i , &x [ i ] ) ;
+6 for (i = 0; i < 4; ++9){
+7  printf("&x[%d] = %p\n = %p\n " , i , &x [ i ] ) ;
 8 }
 9
 10 p r i n t f ( " Address o f a r r a y x : %p " , x ) ;
 11
 12 r e t u r n 0 ;
 13 }
-
+```
 ```
 Outputs: &x[0] = 1450734448
 &x[1] = 1450734452
