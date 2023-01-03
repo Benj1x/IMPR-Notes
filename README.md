@@ -104,7 +104,7 @@ antage, at vi **kun** skal vise det for "int a ="
 4   int var = 5;
 5   printf("var: %d\n", var);
 6
-7 // Notece the use of & before var
+7 // Notice the use of & before var
 8   printf("address of var: &p", &var);
 9   return 0;
 10 }
@@ -138,8 +138,6 @@ Outputs: &x[0] = 1450734448
 &x[2] = 1450734456
 &x[3] = 1450734460
 Address of array x: 1450734448
-```
-
 ```
 There is a difference of 4 bytes between two array elements. It is be-
 cause the size of int is 4 bytes. The address of &x[0] and x is the same. It’s
@@ -176,7 +174,7 @@ Output: Enter 6 numbers: 2
 4
 Sum = 29
 ```
-
+```
 1 //In this example, &x[2], the address of the third element, is assigned to the ptr pointer.
  Hence , 3 was dispayed when we printed the *ptr.
 2 //printing *(ptr+1) gives us the fourth element. Similarly, printing *(ptr-1) gives us the second element.
