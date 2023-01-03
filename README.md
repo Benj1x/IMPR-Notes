@@ -93,7 +93,7 @@ antage, at vi **kun** skal vise det for "int a ="
 6 printf("%d", *pc); // Ouptut : 1
 7 //We have assigned the address of c to the pc pointer.
 8
-9 //Then , we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.
+9 //Then, we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.
 ```
 
 ### 3.4 Printing a variable and it’s memory address:
@@ -193,16 +193,17 @@ Sum = 29
 15
 16  return 0;
 17 }
-
+```
 ## 5 Memory Allocation
 
 ### 5.1 malloc
 
-```
+
 The name "malloc" stands for memory allocation.
 The malloc() function reserves a block of memory of the specified num-
 ber of bytes. And, it returns a pointer of void which can be casted into
 pointers of any form.
+```
 1 //This allocates 400 bytes of memory. Because the size of a float is 4 bytes.
     And, the pointer ptr holds the address of the first byte in the allocated memory.
 2
@@ -211,9 +212,8 @@ pointers of any form.
 ```
 ### 5.2 calloc
 
-```
+
 The name "calloc" stands for contiguous allocation.
-```
 
 ```
 The malloc() function allocates memory and leaves the memory unini-
@@ -236,7 +236,7 @@ function.
 ## 6 Structs:
 
 ### 6.1 Pointers to structs:
-
+```
 1 #include <stdio.h>
 2 struct person
 3 {
@@ -268,9 +268,9 @@ Now, you can access the members of person1 using the personPtr
 pointer.
 personPtr->age is equivalent to *personPtr.age personPtr->weight is
 equivalent to *personPtr.weight
-```
-### 6.2 Dynamically allocating structs:
 
+### 6.2 Dynamically allocating structs:
+```
 1 #include <stdio.h>
 2 #include <stdlib.h>
 3 struct person {
@@ -288,7 +288,7 @@ equivalent to *personPtr.weight
 
 ```
 This allocates 50 slots for the variable ptr
-```
+
 ## 7 Files
 
 ### 7.1 Read & Write modes
