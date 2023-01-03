@@ -295,7 +295,12 @@ This allocates 50 slots for the variable ptr
 ### 7.1 Read & Write modes
 
 
-Mode Meaning of mode During Inexistence of file
+  
+| Mode| Meaning of mode | During Inexistence of file |
+| ----------- | ----------- | -----------|
+| Header | Title |
+| Paragraph | Text |
+
 
 r Open for reading
 
@@ -415,8 +420,3 @@ mode.
 If the file does not exist, it will be created.
 11
 ```
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
