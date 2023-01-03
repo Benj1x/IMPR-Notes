@@ -1,10 +1,8 @@
 # IMPR-Notes
-Notes for IMPR exam - mostly the stuff I'm a but unsure off
+Notes for IMPR exam - mostly the stuff I'm a bit unsure off
 
 ## IMPR notes
 
-
-      - December Me
 - 1 Hjælpemidler: Contents
    - 1.1 Tilladte hjælpemidler:
    - 1.2 Ikke tilladte hjælpemidler:
@@ -63,19 +61,19 @@ antage, at vi **kun** skal vise det for "int a ="
 ## 3 Pointers
 
 ### 3.1 Declaring a pointer:
-
-1 i n t* x ;
-2 //Here , we have d e c l a r e d a p o i n t e r x o f i n t t y p e.
+```
+1 int* x;
+2 //Here, we have declared a pointer x of int type.
 3
-4 //You can a l s o d e c l a r e p o i n t e r s i n t h e s e ways.
+4 //You can also declare pointers in these ways.
 5
-6 i n t *x1 ;
-7 i n t * x2 ;
-8 // L e t ’ s t a k e a n o t h e r example o f d e c l a r i n g p o i n t e r s.
+6 int *x1;
+7 int* x2 ;
+8 //Let’s take anoth e r example o f d e c l a r i n g p o i n t e r s.
 9
 10 i n t* x1 , x2 ;
 11 //Here , we have d e c l a r e d a p o i n t e r p1 and a normal v a r i a b l e p.
-
+```
 ### 3.2 Assigning addresses to Pointers
 
 ```
