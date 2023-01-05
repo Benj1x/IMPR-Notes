@@ -23,7 +23,8 @@ Notes for IMPR exam - mostly the stuff I'm a bit unsure off
    - 6.1 Pointers to structs:
    - 6.2 Dynamically allocating structs:
 - 7 Files
-   - 7.1 Read & Write modes
+   - 7.1 fgetc & fputc
+   - 7.2 Read & Write modes
 
 
 ## 1 Hjælpemidler: Contents
@@ -292,7 +293,12 @@ This allocates 50 slots for the variable ptr
 
 ## 7 Files
 
-### 7.1 Read & Write modes
+### 7.1 fgetc & fputc
+
+fgetc: Read a character from a file and move the pointer forwards
+fputc: Write a character to a file and move the pointer forwards
+
+### 7.2 Read & Write modes
 
 
 (Ikke tabel version findes nedenunder)
