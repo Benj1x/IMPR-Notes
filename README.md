@@ -1,5 +1,5 @@
 # IMPR-Notes
-Notes for IMPR exam - mostly the stuff I'm a bit unsure off
+Notes for IMPR exam
 
 ## IMPR notes
 
