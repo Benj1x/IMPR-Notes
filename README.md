@@ -25,7 +25,7 @@ Notes for IMPR exam
 - 7 Files
    - 7.1 fgetc & fputc
    - 7.2 Read & Write modes
-- 8 Side tal fra bogen:
+- 8 Sider fra bogen:
    - 8.1 Precedence and Associativity of operators
    - 8.1 Linked list
    - 8.2 Library functions explained (for example fgetc())
@@ -443,7 +443,7 @@ mode.
 If the file does not exist, it will be created.
 11
 ```
-##8 Side tal fra bogen:
+## 8 Sider fra bogen:
 ### 8.1 Linked list 737
     Side 795 (Appendix B)
 ### 8.2 Library functions explained (for example fgetc())
