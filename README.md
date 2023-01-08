@@ -27,7 +27,12 @@ Notes for IMPR exam
    - 7.2 Read & Write modes
 - 8 Side tal fra bogen:
    - 8.1 Precedence and Associativity of operators
-
+   - 8.1 Linked list
+   - 8.2 Library functions explained (for example fgetc())
+   - 8.3 Precedence and Associativity of operators
+   - 8.4 Operators and their names
+   - 8.5 ASCII table (Ligner ikke et normalt table)
+   - 8.6 Keywords (break, int, struct etc.)
 
 ## 1 Hjælpemidler: Contents
 
@@ -450,5 +455,14 @@ If the file does not exist, it will be created.
 ### 8.4 Operators and their names
     Side 814 (Appendix C)
     
-### 8.5 Keywords (break, int, struct atc.)
+### 8.5 ASCII table (Ligner ikke et normalt table)
+    For at finde ASCII værdien (i decimal formen):
+    Left digit + right digit 
+    Så hvis left digit er 6 og right digit er 5
+    Så er det decimal værdien 65, hvilket er ASCII værdien
+   
+    Side 819 (Appendix D)
+    
+### 8.6 Keywords (break, int, struct atc.)
     Side 821 (Appendix E)
+ 
