@@ -25,6 +25,8 @@ Notes for IMPR exam
 - 7 Files
    - 7.1 fgetc & fputc
    - 7.2 Read & Write modes
+- 8 Side tal fra bogen:
+   - 8.1 Precedence and Associativity of operators
 
 
 ## 1 Hjælpemidler: Contents
@@ -65,37 +67,37 @@ antage, at vi **kun** skal vise det for "int a ="
 ### 3.1 Declaring a pointer:
 ```
 1 int* x;
-2 //Here, we have declared a pointer x of int type.
+2 //Here, we have declared a pointer "x" of type int.
 3
-4 //You can also declare pointers in these ways.
+4 //You can also declare pointers in the two following ways.
 5
 6 int *x1;
 7 int* x2 ;
-8 //Let’s take anoth er example of declaring pointers.
+8 //Let’s take another example of declaring pointers:
 9
 10 int* x1, x2;
-11 //Here , we have declared a pointer x1 and a normal variable x2.
+11 //Here , we have declared a pointer x1 and a "normal" variable x2.
 ```
 ### 3.2 Assigning addresses to Pointers
 
 ```
-1 int* pc, c;
+1 int* ptrX, c;
 2 c = 5;
-3 pc = &c;
+3 ptrX = &c;
 4 //Here, 5 is assigned to the variable 'c'. And, the address of c is assigned to the pointer.
 ```
 ### 3.3 Changing Value Pointed by Pointers
 
 ```
-1 int* pc, c;
+1 int* ptrX, c;
 2 c = 5;
-3 pc = &c;
+3 ptrX = &c;
 4 c = 1;
 5 printf("%d", c); // Output : 1
-6 printf("%d", *pc); // Ouptut : 1
-7 //We have assigned the address of c to the pc pointer.
+6 printf("%d", *ptrX); // Ouptut : 1
+7 //We have assigned the address of c to the ptrX pointer.
 8
-9 //Then, we changed the value of c to 1. Since pc and the address of c is the same, *pc gives us 1.
+9 //Then, we changed the value of c to 1. Since ptrX and the address of c is the same, *ptrX gives us 1.
 ```
 
 ### 3.4 Printing a variable and it’s memory address:
@@ -103,18 +105,18 @@ antage, at vi **kun** skal vise det for "int a ="
 1 #include <stdio.h>
 2 int main()
 3 {
-4   int var = 5;
-5   printf("var: %d\n", var);
+4   int x = 5;
+5   printf("x = %d\n", x);
 6
-7 // Notice the use of & before var
-8   printf("address of var: &p", &var);
+7 // Notice the use of & before x
+8   printf("Address of x: %p", &x);
 9   return 0;
 10 }
 ```
 ```
 Output:
-var: 5
-address of var: 2686778
+x = 5
+Address of x: 2686778 //This of course changes
 ```
 ## 4 Arrays & pointers:
 
@@ -141,8 +143,7 @@ Outputs: &x[0] = 1450734448
 &x[3] = 1450734460
 Address of array x: 1450734448
 ```
-There is a difference of 4 bytes between two array elements. It is be-
-cause the size of int is 4 bytes. The address of &x[0] and x is the same. It’s
+There is a difference of 4 bytes between two array elements. That is because the size of int is 4 bytes. The address of &x[0] and x is the same. This is
 because the variable name x points to the first element of the array.
 ```
 1 //Here, we have decalred an array 'x' of 6 elements. To access elements of the array
@@ -177,9 +178,9 @@ Output: Enter 6 numbers: 2
 Sum = 29
 ```
 ```
-1 //In this example, &x[2], the address of the third element, is assigned to the ptr pointer.
- Hence , 3 was dispayed when we printed the *ptr.
-2 //printing *(ptr+1) gives us the fourth element. Similarly, printing *(ptr-1) gives us the second element.
+1 //&x[2] (the address of the third element) is assigned to the ptr pointer.
+ Hence, 3 was dispayed when we printed the *ptr.
+2 //printing *(ptr+1) gives us the fourth element. Printing *(ptr-1) gives us the second element.
 3 #include <stdio.h>
 4 int main() {
 5
@@ -196,30 +197,32 @@ Sum = 29
 16  return 0;
 17 }
 ```
+```
+*ptr = 3 
+*(ptr+1) = 4 
+*(ptr-1) = 2
+```
 ## 5 Memory Allocation
 
 ### 5.1 malloc
 
-
 The name "malloc" stands for memory allocation.
-The malloc() function reserves a block of memory of the specified num-
-ber of bytes. And, it returns a pointer of void which can be casted into
-pointers of any form.
+The malloc() function reserves a block of memory of the specified number of bytes. 
+And, it returns a pointer of the type 'void' which can be casted into pointers of any form.
 ```
 1 //This allocates 400 bytes of memory. Because the size of a float is 4 bytes.
-    And, the pointer ptr holds the address of the first byte in the allocated memory.
+    The pointer ptr holds the address of the first byte in the allocated memory.
 2
 3 ptr = (float*) malloc(100 * sizeof(float));
 4 //Results in a NULL pointer if the memory cannot be allocated.
 ```
 ### 5.2 calloc
 
-
 The name "calloc" stands for contiguous allocation.
 
 ```
-The malloc() function allocates memory and leaves the memory unini-
-tialized, whereas the calloc() function allocates memory and initializes all
+The malloc() function allocates memory and leaves the memory uninitialized, 
+whereas the calloc() function allocates memory and initializes all
 bits to zero.
 1 //allocates contiguous space in memory for 25 elements of type float.
 2 ptr = (float*) calloc(25, sizeof(float));
@@ -435,3 +438,17 @@ mode.
 If the file does not exist, it will be created.
 11
 ```
+##8 Side tal fra bogen:
+### 8.1 Linked list 737
+    Side 795 (Appendix B)
+### 8.2 Library functions explained (for example fgetc())
+    Side 795 (Appendix B)
+    
+### 8.3 Precedence and Associativity of operators
+    Side: 813 (Appendix C)
+    
+### 8.4 Operators and their names
+    Side 814 (Appendix C)
+    
+### 8.5 Keywords (break, int, struct atc.)
+    Side 821 (Appendix E)
